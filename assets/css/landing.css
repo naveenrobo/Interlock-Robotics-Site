@@ -1,0 +1,87 @@
+.cb-loader_overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 999;
+    max-width: 0%;
+    background: #000;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: opacity 1s .3s, max-width 0s 1.3s;
+    -o-transition: opacity 1s .3s, max-width 0s 1.3s;
+    -moz-transition: opacity 1s .3s, max-width 0s 1.3s;
+    transition: opacity 1s .3s, max-width 0s 1.3s;
+    -webkit-transform-origin: center bottom;
+    -moz-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    -o-transform-origin: center bottom;
+    transform-origin: center bottom
+}
+
+.cb-loader_overlay-img {
+    position: fixed;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: -40px 0 0 0;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity .5s, -webkit-transform .5s ease-in-out;
+    transition: opacity .5s, -webkit-transform .5s ease-in-out;
+    -o-transition: opacity .5s, -o-transform .5s ease-in-out;
+    -moz-transition: transform .5s ease-in-out, opacity .5s, -moz-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out, opacity .5s;
+    transition: transform .5s ease-in-out, opacity .5s, -webkit-transform .5s ease-in-out, -moz-transform .5s ease-in-out, -o-transform .5s ease-in-out
+}
+
+.cb-loader_overlay-img svg {
+    width: 200px
+}
+
+.cb-loader_overlay.-front {
+    z-index: 1010
+}
+
+.cb-loader_overlay.-visible {
+    max-width: 100%;
+    pointer-events: auto;
+    opacity: 1;
+    -webkit-transition-delay: .3s, 0s;
+    -moz-transition-delay: .3s, 0s;
+    -o-transition-delay: .3s, 0s;
+    transition-delay: .3s, 0s;
+    -webkit-transition-duration: .3s, 0s;
+    -moz-transition-duration: .3s, 0s;
+    -o-transition-duration: .3s, 0s;
+    transition-duration: .3s, 0s
+}
+
+.cb-loader_overlay.-visible .cb-loader_overlay-img {
+    opacity: 1;
+    -webkit-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s
+}
+
+.path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 10s linear forwards;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1000;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
