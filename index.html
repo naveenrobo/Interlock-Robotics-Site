@@ -11,7 +11,7 @@
         content="Interlock Security’s main business is to provide Security Services to Condominiums, Offices and Industrial Buildings in Singapore." />
     <meta name="google" content="nositelinkssearchbox" />
 
-    <title>Robotics - Interlock Group</title>`
+    <title>Robotics - Interlock Group</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -23,6 +23,11 @@
 
 
     <link type="text/css" rel="stylesheet" href="assets/css/main.css">
+
+
+    <script src="/assets/js/modernizr-custom.js"></script>
+    <script src="/assets/js/detectizr.min.js"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/soundmanager2/2.97a.20150601/script/soundmanager2.js"
         integrity="sha256-DrkA/x59nG8uo2vOnL+PNkU7OnOqmnrZ23OUKp6rUlQ=" crossorigin="anonymous"></script>
@@ -42,6 +47,9 @@
 
     <link rel="stylesheet" href="/assets/css/landing.css">
     <style>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700&display=swap);
+
+
         * {
             box-sizing: border-box
         }
@@ -53,7 +61,20 @@
             margin: 0
         }
 
-
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #131313;
+            color: #2128bd;
+            font-family: Montserrat, sans-serif;
+            font-size: 14px;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
 
         .model-canvas {
             width: 100%;
@@ -85,7 +106,6 @@
 
         .container {
             width: 100%;
-            height: 100%;
         }
 
         .landing {
@@ -93,9 +113,7 @@
             height: 100%;
         }
 
-        .features {
-            height: 100vh;
-        }
+
 
 
         /* That's it: */
@@ -244,7 +262,7 @@
             position: absolute;
             width: 500px;
             height: 200px;
-            background-color: #30303052;
+            background-color: #303030ba;
             bottom: 5%;
             left: 10%;
             transition: opacity 0.3s ease-in-out;
@@ -268,6 +286,250 @@
 
         .specs .points {
             padding-left: 50px;
+        }
+
+        .types {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .types .type-container {
+            width: 1160px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 100px;
+            padding-bottom: 60px;
+        }
+
+        .types .content {
+            display: flex;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .types .content h2 {
+            margin: 0;
+            font-family: Montserrat, sans-serif;
+            font-size: 66px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.09;
+            letter-spacing: normal;
+            text-align: center;
+            color: #6c63ff;
+            margin: 30px 0;
+        }
+
+        .types .content h4 {
+            margin: 0;
+            font-family: Montserrat, sans-serif;
+            font-size: 25px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.09;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffae00
+        }
+
+        .types .content p {
+            max-width: 100%;
+            font-family: Montserrat, sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.67;
+            letter-spacing: normal;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .sub-content {
+            padding: 20px 0;
+        }
+
+
+        @media (max-width: 750px) {
+            .types .type-container {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 60px;
+                padding-bottom: 30px;
+            }
+
+            .types .content h3 {
+                font-size: 50px;
+
+            }
+
+            .types .content p {
+                font-size: 14px;
+            }
+        }
+
+
+        .contacts {
+            position: relative;
+
+            margin: 50px 0;
+        }
+
+        .contacts-container {
+            padding: 0 250px;
+        }
+
+
+        .title .title-container:last-child {
+            display: inline-block;
+        }
+
+        .contacts .title-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contacts .title-container::before {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 30px;
+            background: #6c63ff;
+            content: '';
+            transform: translate3d(0, 50%, 0);
+        }
+
+        .contacts .title-text {
+            margin: 0;
+            display: block;
+            position: relative;
+            z-index: 1;
+            font-size: 60px;
+            line-height: 1.1;
+            text-transform: uppercase;
+            white-space: nowrap;
+            color: #FFF;
+            animation: Up 0.9s 1.5s both;
+        }
+
+        @media (max-width: 750px) {
+            .contacts-container {
+                padding: 0 20px;
+            }
+
+            .contacts .title-text {
+                font-size: 45px;
+            }
+        }
+
+        .contacts .contact-details {
+            margin-top: 5vh;
+        }
+
+        .contacts .contact-details .contact-city {
+            animation: fadeIn 0.9s both;
+            animation-delay: 0.9s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 25px;
+            cursor: default;
+            color: #6c63ff;
+        }
+
+        .contacts .details-container {
+            color: white;
+            font-size: 30px;
+            margin-top: 10vh;
+
+        }
+
+        .contacts .details-container ul {
+            list-style: none;
+            font-style: normal;
+            font-size: 18px;
+            font-weight: 400;
+            margin: 0;
+            padding: 0
+        }
+
+        .contacts .details-container li {
+            margin-bottom: 40px;
+        }
+
+        .contacts .details-container p {
+            margin: 6px 0;
+
+            font-size: 20px;
+        }
+
+        .contacts .details-container a {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            position: relative;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: row;
+            padding: 50px 200px;
+            list-style-type: none;
+            color: white;
+            justify-content: space-between;
+        }
+
+
+        @media (max-width: 750px) {
+            .footer {
+                flex-direction: column;
+                padding: 20px 50px;
+                text-align: center
+            }
+
+            .footer-item {
+                align-content: center;
+                padding: 10px 0;
+            }
+        }
+
+        .footer-socials a {
+            padding: 0 25px;
+        }
+  
+        .btn {
+            height: 55px;
+            line-height: 55px;
+            padding-right: 38px;
+            padding-left: 38px;
+            font-size: 16px;
+            color: #000;
+            background-color: #ffae00;
+            transition: background-color .4s ease;
+            text-align: center;
+            font-family: Montserrat, sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            outline: none;
+            border-radius: 7px;
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #FEBD1C;
+            transition: background-color .4s ease
         }
     </style>
     <link rel="stylesheet" href="/assets/css/bat.css">
@@ -393,7 +655,7 @@
                     </li>
                     <li onclick="bmChangeSection('lidar')">
                         <div class="bullet orange"></div>
-                        <div class="time">Lidar</div>
+                        <div class="time">Guidance System</div>
                     </li>
                     <li onclick="bmChangeSection('body')">
                         <div class="bullet orange"></div>
@@ -412,22 +674,22 @@
                         <ul>
                             <li>
                                 <span>
-                                    Built-in, high-precision encoder
+                                    Industrial Rugged Servos
                                 </span>
                             </li>
                             <li>
                                 <span>
-                                    High Torque & High Speed capabilities
+                                    High torque and Speed capabilities
                                 </span>
                             </li>
                             <li>
                                 <span>
-
+                                    High Precision and Repetability
                                 </span>
                             </li>
                             <li>
                                 <span>
-
+                                    Customized to fit any load conditions
                                 </span>
                             </li>
                         </ul>
@@ -441,29 +703,227 @@
                         <ul>
                             <li>
                                 <span>
-                                    1
+                                    Design capable of supporting any wheels
                                 </span>
                             </li>
                             <li>
                                 <span>
-                                    2
+                                    Customization from 4" to 10"
                                 </span>
                             </li>
                             <li>
                                 <span>
-                                    3
+                                    Supports wide variety from rubber, nylon to omni-directional wheels
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="spec-controller" class="spec" style="opacity: 0;">
+                    <div class="title">
+                        <span>Controller</span>
+                    </div>
+                    <div class="points">
+                        <ul>
+                            <li>
+                                <span>
+                                    Powerful and state of art in functionalities
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    Processors from reputed brands
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    Supports CPU and GPU based processing
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    Capability to support recent ROS frameworks
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="spec-lidar" class="spec" style="opacity: 0;">
+                    <div class="title">
+                        <span>Guidance System</span>
+                    </div>
+                    <div class="points">
+                        <ul>
+                            <li>
+                                <span>
+                                    Support for vision based guidance system
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="spec-body" class="spec" style="opacity: 0;">
+                    <div class="title">
+                        <span>Payload</span>
+                    </div>
+                    <div class="points">
+                        <ul>
+                            <li>
+                                <span>
+                                    Customized for your needs
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    Supports payload for various applications patrolling to warehousing
                                 </span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-
+            <div id="scroll" class="scroll" style="transform: translate3d(-50%, 0%, 0px); visibility: inherit;">
+                <p>scroll to</p> <span><span></span></span>
+                <p>discover</p>
+            </div>
         </section>
-        <section class="features">
+        <section class="types type-1">
+            <div class="type-container">
+                <div class="content">
+                    <div class="sub-content content-title">
+                        <h2>Mobile Robots for Research and Development</h2>
+                    </div>
+                    <div class="sub-content content-desc">
+                        <p>
+                            We deliver customized robot to meet all your R&D. Our robots are more
+                            rugged to
+                            fit to any terrains and current version can support payload up to 100Kg.We make robot for
+                            both
+                            indoor and outdoor purpose.We have provision for 2 wheel powered and four
+                            wheel powered. These robots had been used by the different client for different purposes
+                            starting from food delivery,super market assistant ,security patrolling and lot more.We have
+                            our
+                            own opensource fully accessible software stack. These software stacks go in par with the
+                            recent
+                            trends in Robot Operating System(ROS). Our expert team collects requirements and plan a
+                            unique
+                            and customized robot.We don't make our design and force you to buy. We design from scratch
+                            and
+                            fabricate to fit your exclusive requirement.
+                        </p>
+                    </div>
+                    <div class="sub-content content-customize">
+                        <!-- <h4>
 
+                            <button href="" class="btn">Customize --></button>
+
+                        </h4> -->
+                    </div>
+                    <div class="sub-content content-image">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="types type-2">
+            <div class="type-container">
+                <div class="content">
+                    <div class="sub-content content-title">
+                        <h2>Autonomous Mobile Robots</h2>
+                    </div>
+                    <div class="sub-content content-desc">
+                        <p>
+                            An autonomous robot is a robot that performs behaviors or tasks with a high degree of
+                            autonomy (without external influence). Autonomous robotics is usually considered to be a
+                            subfield of artificial intelligence, robotics, and information engineering. These robots
+                            have SLAM (Simultaneous Localization and Mapping) and high degree of autonomy .
+                            These features enables it move autonomously from one point to the other by avoiding obstacle
+                            in its path.
+
+                        </p>
+                    </div>
+                    <div class="sub-content content-image">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="types type-3">
+            <div class="type-container">
+                <div class="content">
+                    <div class="sub-content content-title">
+                        <h2>Autonomous Guided Vechicles</h2>
+                    </div>
+                    <div class="sub-content content-desc">
+                        <p>
+                            An automated guided vehicle or automatic guided vehicle (AGV) is a portable robot that
+                            follows along marked long lines or wires on the floor.
+                            They travel from one point to the other following this guided path.
+                        </p>
+                    </div>
+                    <div class="sub-content content-image">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacts">
+            <div class="contacts-container">
+                <div class="title">
+                    <div class="title-container">
+                        <h1 class="title-text">Contacts</h1>
+                    </div>
+                </div>
+                <div class="contact-details">
+                    <p class="contact-city">Singapore</p>
+                    <address class="details-container">
+                        <ul>
+                            <li>
+                                <p class="heading">Phone</p>
+                                <a href="tel:65-6294-6927">+65 6294-6927</a>
+                            </li>
+                            <li>
+                                <p class="heading">E-mail</p>
+                                <a href="mailto:info@interlocksecurity.com.sg">info@interlocksecurity.com.sg</a>
+                            </li>
+                            <li>
+                                <p class="heading">Address</p>
+                                <p>
+                                    <a href="https://goo.gl/maps/wYkEq7eKuC2Pr4nd6">
+                                        519 Balestier Rd, Singapore 329852
+                                    </a>
+                                </p>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+            </div>
         </section>
     </main>
+
+    <footer>
+        <ul class="footer">
+            <li class="footer-item"></li>
+            <!-- <li class="footer-item footer-socials">
+                    <a href="http://www.twitter.com">
+                        <img height="18" width="18" src="/assets/images/twitter.png" alt="Twitter" class="icons">
+                    </a>
+                    <a href="http://www.facebook.com">
+                        <img height="18" width="18" src="/assets/images/facebook.png" alt="Facebook" class="icons">
+                    </a>
+                </li> -->
+            <li class="footer-item">&copy; 2019 Interlock Group</li>
+        </ul>
+    </footer>
+
+
 
     <script src="/assets/js/main.js"></script>
 </body>

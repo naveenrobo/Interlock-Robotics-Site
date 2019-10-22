@@ -1,5 +1,14 @@
 function init() {
-    THREE.WEBGL.isWebGLAvailable() ? (dwInitWebGL(), initSounds()) : dwShowError();
+    let isMobile  = document.querySelector("html").classList.contains("mobile");
+    if(!isMobile){
+        THREE.WEBGL.isWebGLAvailable() ? (dwInitWebGL(), initSounds()) : dwShowError();
+    }else {
+        setTimeout(()=>{
+            document.querySelector(".landing").style.display = "none";
+            document.getElementById('loader').classList.remove('-visible');
+        },3000)
+    }
+    
 }
 function dwShowError() {
 

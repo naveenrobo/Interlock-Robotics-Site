@@ -1,0 +1,62 @@
+
+https://zikzak.com.ua/en/cases/onovo/
+
+Mobile Robots for Research and Development
+
+We deliver customized robot to meet all your Research Development. Our robots are more rugged to fit to any terrains and current version can support payload up to 100Kg . 
+We make robot for both indoor and outdoor purpose.We have provision for 2 wheel powered and four wheel powered. These robots had been used by the different client for  different purposes starting from food delivery,super market assistant ,security patrolling and lot more.We have our own opensource fully accessible software stack. These software stacks go in par with the recent trends in Robot Operating System(ROS).  Our expert team collects requirements and plan a unique and customized robot. 
+We don't make our design and force you to buy. We design from scratch and fabricate to fit your exclusive requirement.
+
+Customization form.
+
+Payload - unit kg
+Footprint - 
+    - length
+    - breath
+    - height
+
+Operation Duration - hours/ km
+Type of wheels
+No of wheels
+Ground Clearance
+lead outs (check box) -- USB  ,HDMI  ,ethernet ,power supply ports (12v/5A), 5V/2A
+Max Travesing speed
+Max Acceleration
+Zero turning radius
+powered wheels 2/4 = Option
+Driving machanism (radio box)
+     - 4 wheel powered, 
+     - 2 wheel powered 2 caster wheels
+     - Steering mechanism with 2 wheel powered
+Accessories 
+  - E-Stop
+  - Battery level indicators
+  - warining light indicators
+  - Others (text area)
+
+Please specify your requirements indetail so that we fabricate exclusively for you (textarea)
+
+
+
+
+
+Autonomous Mobile Robots
+
+An autonomous robot is a robot that performs behaviors or tasks with a high degree of autonomy (without external influence). Autonomous robotics is usually considered to be a subfield of artificial intelligence, robotics, and information engineering. These robots have SLAM (Simultaneous Localization and Mapping) and high degree of autonomy .
+These features enables it move autonomously from one point to the other by avoiding obstacle in its path.
+
+    Security Patrolling Robot:
+    With our blood and DNA from the security Industry. To make our self a pioneer in this technology transformation we built our security own robots which would hit the market in early  2020. These Autonomous mobile robots assist securities in patrolling .Enhanced Video analytics features built in with the robot replaces the human in security patrol. This robot is capable of travelling autonomously to any location based on the GPS or the predefined map location.
+
+    Smart Basket:
+    We build a smart basket that follows  you in the super market. This autonomously follows you in the super market and helps to bill autonomously and aids in finding the products.
+
+
+Autonomous Guided  Vechicles
+
+An automated guided vehicle or automatic guided vehicle (AGV) is a portable robot that follows along marked long lines or wires on the floor.
+They travel from one point to the other following this guided path.
+
+    Waiter Robot:
+    These smart robots are capable of serving food from the kitchen to restaurant tables. 
+    Autonomous server bot follows the the predefined path  these path can be a striped line or magnetic tape hidden under the floor. These robot serves the hot yummy food from the kitchen to respective table on one touch commands.
