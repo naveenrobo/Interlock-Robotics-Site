@@ -500,7 +500,7 @@
             opacity: 1;
         }
     </style>
-    <div class="customize customize_active">
+    <div class="customize">
         <div class="close" onclick="toggleModal()">
             <img src="./assets/images/close.svg" alt="Close">
         </div>
@@ -515,7 +515,7 @@
                             <label for="payload" class="ContactForm-headline">
                                 <span>Payload</span>
                             </label>
-                            <input type="text" name="$payload" id="payload" placeholder="payload in kgs"
+                            <input type="text" name="$payload" id="payload" min="1" max="100" placeholder="payload in kgs"
                                 autocomplete="false" class="ContactForm-inputText">
                         </div>
 
@@ -523,7 +523,7 @@
                             <label for="ground_clearance" class="ContactForm-headline">
                                 <span>Ground Clearance</span>
                             </label>
-                            <input type="text" name="$ground_clearance" id="ground_clearance" placeholder="in meters"
+                            <input type="text" name="$ground_clearance" id="ground_clearance" min="1" max="10" placeholder="in meters"
                                 autocomplete="false" class="ContactForm-inputText">
                         </div>
                         <div class="ContactForm-item company">
@@ -545,7 +545,7 @@
                             <label for="number_of_wheels" class="ContactForm-headline">
                                 <span>Number of wheels</span>
                             </label>
-                            <input type="number" name="$number_of_wheels" placeholder="4" id="number_of_wheels"
+                            <input type="number" name="$number_of_wheels" placeholder="4" id="number_of_wheels" min="1" max="4"
                                 autocomplete="false" class="ContactForm-inputText">
                         </div>
 
@@ -585,7 +585,7 @@
                             <label for="operation_duration" class="ContactForm-headline">
                                 <span>Operation Duration</span>
                             </label>
-                            <input type="number" name="$operation_duration" placeholder="hrs" id="operation_duration"
+                            <input type="number" name="$operation_duration" placeholder="hrs" id="operation_duration" min="1" max="5"
                                 autocomplete="false" class="ContactForm-inputText">
                         </div>
 
