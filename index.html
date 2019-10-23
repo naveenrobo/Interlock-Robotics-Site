@@ -13,11 +13,11 @@
 
     <title>Robotics - Interlock Group</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#000000">
 
@@ -25,514 +25,29 @@
     <link type="text/css" rel="stylesheet" href="assets/css/main.css">
 
 
-    <script src="/assets/js/modernizr-custom.js"></script>
-    <script src="/assets/js/detectizr.min.js"></script>
+    <script src="./assets/js/modernizr-custom.js"></script>
+    <script src="./assets/js/detectizr.min.js"></script>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/soundmanager2/2.97a.20150601/script/soundmanager2.js"
         integrity="sha256-DrkA/x59nG8uo2vOnL+PNkU7OnOqmnrZ23OUKp6rUlQ=" crossorigin="anonymous"></script>
 
-    <script src="/assets/js/three/three.min.js"></script>
-    <script src="/assets/js/three/WebGL.js"></script>
-    <script src="/assets/js/three/controls/OrbitControls.js"></script>
-    <script src="/assets/js/three/loaders/BasisTextureLoader.js"></script>
-    <script src="/assets/js/three/loaders/GLTFLoader.js"></script>
+    <script src="./assets/js/three/three.min.js"></script>
+    <script src="./assets/js/three/WebGL.js"></script>
+    <script src="./assets/js/three/controls/OrbitControls.js"></script>
+    <script src="./assets/js/three/loaders/BasisTextureLoader.js"></script>
+    <script src="./assets/js/three/loaders/GLTFLoader.js"></script>
 
-    <script src="/assets/js/lzma.js"></script>
+    <script src="./assets/js/lzma.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
         integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
         integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/assets/css/landing.css">
-    <style>
-        @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700&display=swap);
-
-
-        * {
-            box-sizing: border-box
-        }
-
-        html,
-        body {
-            height: 100%;
-            padding: 0;
-            margin: 0
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            background: #131313;
-            color: #2128bd;
-            font-family: Montserrat, sans-serif;
-            font-size: 14px;
-            letter-spacing: normal;
-            line-height: normal;
-            text-align: left;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale
-        }
-
-        .model-canvas {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            cursor: pointer;
-        }
-
-        .controls {
-            position: absolute;
-            top: 40%;
-            right: 0;
-            margin: 10px;
-        }
-
-        .controls a {
-            padding: 5px 5px;
-            cursor: pointer;
-            width: 100px;
-            margin-bottom: 5px;
-            background: transparent;
-            border: 0;
-            color: white;
-            font-size: 21px;
-            text-align: left;
-        }
-
-        .container {
-            width: 100%;
-        }
-
-        .landing {
-            width: 100%;
-            height: 100%;
-        }
-
-
-
-
-        /* That's it: */
-        .mouse {
-            display: block;
-            position: absolute;
-            margin: 0 auto;
-            width: 26px;
-            height: 46px;
-            border-radius: 13px;
-            border: 2px solid #ffae00;
-            bottom: 20px;
-            left: 50%;
-            margin-left: -13px;
-        }
-
-        .mouse span {
-            display: block;
-            margin: 6px auto;
-            width: 3px;
-            height: 3px;
-            border-radius: 50%;
-            background: #ffae00;
-            border: 1px solid transparent;
-            -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-            -webkit-animation-name: scroll;
-            animation-name: scroll;
-        }
-
-        .mouse p {
-            display: block;
-        }
-
-        @-webkit-keyframes scroll {
-            0% {
-                opacity: 1;
-                -webkit-transform: translateY(0);
-                transform: translateY(0);
-            }
-
-            100% {
-                opacity: 0;
-                -webkit-transform: translateY(16px);
-                transform: translateY(16px);
-            }
-        }
-
-        @keyframes scroll {
-            0% {
-                opacity: 1;
-                -webkit-transform: translateY(0);
-                -ms-transform: translateY(0);
-                transform: translateY(0);
-            }
-
-            100% {
-                opacity: 0;
-                -webkit-transform: translateY(16px);
-                -ms-transform: translateY(16px);
-                transform: translateY(16px);
-            }
-        }
-
-        section {
-            position: relative;
-        }
-
-        ol li {
-            list-style-type: none;
-        }
-
-        .pulser {
-            -webkit-animation: pulse 3s ease 3.5s infinite normal;
-            -moz-animation: pulse 3s ease 3.5s infinite normal;
-            -ms-animation: pulse 3s ease 3.5s infinite normal;
-            -o-animation: pulse 3s ease 3.5s infinite normal;
-            animation: pulse 3s ease 3.5s infinite normal
-        }
-
-        .timeline {
-            position: absolute;
-            top: 40%;
-            right: 2%;
-            margin: 10px;
-        }
-
-        .timeline ul {
-            margin: 0;
-            list-style: none;
-            position: relative;
-        }
-
-        /*   .timeline ul::before {
-            content: ' ';
-            height: 100%;
-            width: 2px;
-            background-color: #d9d9d9;
-            position: absolute;
-            top: 0;
-            left: 2.5em;
-            z-index: -1;
-        } */
-
-        .timeline li div {
-            display: inline-block;
-            margin: 2px 0;
-        }
-
-        .timeline .time {
-            width: auto;
-            font-size: 15px;
-            text-align: right;
-        }
-
-        .timeline .bullet {
-            width: 1em;
-            height: 1em;
-            box-sizing: border-box;
-            border-radius: 50%;
-            background: #000;
-            z-index: 1;
-            margin-right: 4px;
-            vertical-align: sub;
-        }
-
-        .timeline .bullet.orange {
-            border: 2px solid #ffb000;
-        }
-
-        .timeline li:hover>.bullet {
-            border: 2px solid #eeff00;
-            transition: border .3s;
-        }
-
-        .timeline li:hover>.time {
-            color: #eeff00;
-            transition: color .3s;
-        }
-
-        .specs {
-            position: absolute;
-            width: 500px;
-            height: 200px;
-            background-color: #303030ba;
-            bottom: 5%;
-            left: 10%;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .spec {
-            position: absolute;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .specs .title {
-            margin: 10px;
-            margin-left: 20px;
-        }
-
-        .specs .title span {
-            font-size: 20px;
-            font-weight: 300;
-            text-transform: uppercase;
-        }
-
-        .specs .points {
-            padding-left: 50px;
-        }
-
-        .types {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .types .type-container {
-            width: 1160px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-top: 100px;
-            padding-bottom: 60px;
-        }
-
-        .types .content {
-            display: flex;
-            flex-direction: column;
-            -webkit-box-pack: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .types .content h2 {
-            margin: 0;
-            font-family: Montserrat, sans-serif;
-            font-size: 66px;
-            font-weight: 300;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 1.09;
-            letter-spacing: normal;
-            text-align: center;
-            color: #6c63ff;
-            margin: 30px 0;
-        }
-
-        .types .content h4 {
-            margin: 0;
-            font-family: Montserrat, sans-serif;
-            font-size: 25px;
-            font-weight: 300;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 1.09;
-            letter-spacing: normal;
-            text-align: center;
-            color: #ffae00
-        }
-
-        .types .content p {
-            max-width: 100%;
-            font-family: Montserrat, sans-serif;
-            font-size: 18px;
-            font-weight: 300;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 1.67;
-            letter-spacing: normal;
-            text-align: center;
-            color: rgb(255, 255, 255);
-            margin-left: auto;
-            margin-right: auto
-        }
-
-        .sub-content {
-            padding: 20px 0;
-        }
-
-
-        @media (max-width: 750px) {
-            .types .type-container {
-                width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-                padding-top: 60px;
-                padding-bottom: 30px;
-            }
-
-            .types .content h2 {
-                font-size: 50px;
-
-            }
-
-            .types .content p {
-                font-size: 14px;
-            }
-        }
-
-
-        .contacts {
-            position: relative;
-
-            margin: 50px 0;
-        }
-
-        .contacts-container {
-            padding: 0 250px;
-        }
-
-
-        .title .title-container:last-child {
-            display: inline-block;
-        }
-
-        .contacts .title-container {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contacts .title-container::before {
-            display: block;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 30px;
-            background: #6c63ff;
-            content: '';
-            transform: translate3d(0, 50%, 0);
-        }
-
-        .contacts .title-text {
-            margin: 0;
-            display: block;
-            position: relative;
-            z-index: 1;
-            font-size: 60px;
-            line-height: 1.1;
-            text-transform: uppercase;
-            white-space: nowrap;
-            color: #FFF;
-            animation: Up 0.9s 1.5s both;
-        }
-
-        @media (max-width: 750px) {
-            .contacts-container {
-                padding: 0 20px;
-            }
-
-            .contacts .title-text {
-                font-size: 45px;
-            }
-        }
-
-        .contacts .contact-details {
-            margin-top: 5vh;
-        }
-
-        .contacts .contact-details .contact-city {
-            animation: fadeIn 0.9s both;
-            animation-delay: 0.9s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 25px;
-            cursor: default;
-            color: #6c63ff;
-        }
-
-        .contacts .details-container {
-            color: white;
-            font-size: 30px;
-            margin-top: 10vh;
-
-        }
-
-        .contacts .details-container ul {
-            list-style: none;
-            font-style: normal;
-            font-size: 18px;
-            font-weight: 400;
-            margin: 0;
-            padding: 0
-        }
-
-        .contacts .details-container li {
-            margin-bottom: 40px;
-        }
-
-        .contacts .details-container p {
-            margin: 6px 0;
-
-            font-size: 20px;
-        }
-
-        .contacts .details-container a {
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            position: relative;
-        }
-
-        .footer {
-            display: flex;
-            flex-direction: row;
-            padding: 50px 200px;
-            list-style-type: none;
-            color: white;
-            justify-content: space-between;
-        }
-
-
-        @media (max-width: 750px) {
-            .footer {
-                flex-direction: column;
-                padding: 20px 50px;
-                text-align: center
-            }
-
-            .footer-item {
-                align-content: center;
-                padding: 10px 0;
-            }
-        }
-
-        .footer-socials a {
-            padding: 0 25px;
-        }
-  
-        .btn {
-            height: 55px;
-            line-height: 55px;
-            padding-right: 38px;
-            padding-left: 38px;
-            font-size: 16px;
-            color: #000;
-            background-color: #ffae00;
-            transition: background-color .4s ease;
-            text-align: center;
-            font-family: Montserrat, sans-serif;
-            display: inline-block;
-            overflow: hidden;
-            outline: none;
-            border-radius: 7px;
-            font-weight: 400;
-            text-decoration: none;
-        }
-
-        .btn:hover {
-            background-color: #FEBD1C;
-            transition: background-color .4s ease
-        }
-    </style>
-    <link rel="stylesheet" href="/assets/css/bat.css">
+    <link rel="stylesheet" href="./assets/css/landing.css">
+    <link rel="stylesheet" href="/assets/css/calc.css">
+    <link rel="stylesheet" href="./assets/css/bat.css">
 </head>
 
 <body>
@@ -786,10 +301,12 @@
                     </div>
                 </div>
             </div>
+
             <div id="scroll" class="scroll" style="transform: translate3d(-50%, 0%, 0px); visibility: inherit;">
                 <p>scroll to</p> <span><span></span></span>
                 <p>discover</p>
             </div>
+
         </section>
         <section class="types type-1">
             <div class="type-container">
@@ -817,11 +334,11 @@
                         </p>
                     </div>
                     <div class="sub-content content-customize">
-                        <!-- <h4>
-
-                            <button href="" class="btn">Customize --></button>
-
-                        </h4> -->
+                        <div style="position: relative;">
+                            <button class="bm-btn bm-btn_flat -sm -primary" onclick="toggleModal()" type="button">
+                                <span>Сustomize</span>
+                            </button>
+                        </div>
                     </div>
                     <div class="sub-content content-image">
 
@@ -908,24 +425,320 @@
         </section>
     </main>
 
+    <style>
+        .customize {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, .88);
+            overflow-y: scroll;
+            z-index: 999;
+            pointer-events: none;
+            -webkit-transition: opacity .3s ease, visibility .3s step-end;
+            transition: opacity .3s ease, visibility .3s step-end;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .customize_active {
+            pointer-events: all;
+            opacity: 1;
+            visibility: visible;
+            -webkit-transition: opacity .3s ease, visibility 0s step-start;
+            transition: opacity .3s ease, visibility 0s step-start;
+        }
+
+        .customize .close {
+            position: fixed;
+            top: 36px;
+            right: 36px;
+            cursor: pointer;
+        }
+
+        .customize .close img {
+            max-width: 16px;
+        }
+
+        .customize_container {
+            width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+
+        }
+
+        .customize_modal {
+            margin: 100px auto;
+            width: 1000px;
+            height: 100%;
+            background-color: #131313;
+            -webkit-transform: translate3d(1px, 50px, 1px);
+            transform: translate3d(1px, 50px, 1px);
+            position: relative;
+            transition: opacity 1s ease, -webkit-transform 1s ease;
+            transition: opacity 1s ease, transform 1s ease;
+            transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
+            opacity: 0;
+            padding: 10px
+        }
+
+        @media (max-width: 750px) {
+            .customize_modal {
+                width: 100%;
+                height: 100%;
+                padding: 5px;
+            }
+
+            .customize_container {
+                padding: 10px;
+            }
+        }
+
+        .customize_active .customize_modal {
+            transform: translate3d(1px, 1px, 1px);
+            opacity: 1;
+        }
+    </style>
+    <div class="customize customize_active">
+        <div class="close" onclick="toggleModal()">
+            <img src="./assets/images/close.svg" alt="Close">
+        </div>
+        <div class="customize_container">
+            <div class="customize_modal">
+                <form id="spec-form" onsubmit="return submitForm(event)">
+                    <input type="hidden" name="accessKey" value="9a657b09-b40c-4b50-b2f3-2faff410d5cc">
+
+                    <h4>Structure</h4>
+                    <div class="cust-section payload">
+                        <div class="ContactForm-item company">
+                            <label for="payload" class="ContactForm-headline">
+                                <span>Payload</span>
+                            </label>
+                            <input type="text" name="$payload" id="payload" placeholder="payload in kgs"
+                                autocomplete="false" class="ContactForm-inputText">
+                        </div>
+
+                        <div class="ContactForm-item company">
+                            <label for="ground_clearance" class="ContactForm-headline">
+                                <span>Ground Clearance</span>
+                            </label>
+                            <input type="text" name="$ground_clearance" id="ground_clearance" placeholder="in meters"
+                                autocomplete="false" class="ContactForm-inputText">
+                        </div>
+                        <div class="ContactForm-item company">
+                            <label for="footprint" class="ContactForm-headline">
+                                <span>Footprint</span>
+                            </label>
+                            <input type="text" name="$footprint" id="footprint" autocomplete="false"
+                                placeholder="lxbxh (20x20x30) (each in meters)" class="ContactForm-inputText">
+                        </div>
+                    </div>
+
+                    <style>
+
+                    </style>
+
+                    <h4>Wheels</h4>
+                    <div class="cust-section payload">
+                        <div class="ContactForm-item company">
+                            <label for="number_of_wheels" class="ContactForm-headline">
+                                <span>Number of wheels</span>
+                            </label>
+                            <input type="number" name="$number_of_wheels" placeholder="4" id="number_of_wheels"
+                                autocomplete="false" class="ContactForm-inputText">
+                        </div>
+
+                        <div class="ContactForm-item company">
+                            <label for="type_of_wheel" class="ContactForm-headline">
+                                <span>Type of wheel</span>
+                            </label>
+                            <select name="$type_of_wheel" id="type_of_wheel" class="ContactForm-inputText">
+                                <option value="omni-wheel">Omni Wheels</option>
+                                <option value="rubber">Rubber Wheels</option>
+                                <option value="nylon">Nylon Wheel</option>
+                            </select>
+                        </div>
+                        <div class="ContactForm-item company">
+                            <label for="powered_wheel" class="ContactForm-headline">
+                                <span>Powered wheel</span>
+                            </label>
+                            <select name="$powered_wheel" id="powered_wheel" class="ContactForm-inputText">
+                                <option value="2">2</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="ContactForm-item ">
+                            <label class="custom-checkbox ContactForm-headline" for="zero_turning_radius">Zero Turning
+                                Radius
+                                <input type="checkbox" checked="checked" name="$zero_turning_radius"
+                                    id="zero_turning_radius">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <h4>Power</h4>
+                    <div class="cust-section payload">
+                        <div class="ContactForm-item company">
+                            <label for="operation_duration" class="ContactForm-headline">
+                                <span>Operation Duration</span>
+                            </label>
+                            <input type="number" name="$operation_duration" placeholder="hrs" id="operation_duration"
+                                autocomplete="false" class="ContactForm-inputText">
+                        </div>
+
+                        <div class="ContactForm-item company">
+                            <label for="traversing_speed" class="ContactForm-headline">
+                                <span>Max Traversing Speed</span>
+                            </label>
+                            <input type="number" name="$Max Traversing Speed" placeholder="m/s" id="traversing_speed"
+                                autocomplete="false" class="ContactForm-inputText">
+                        </div>
+                        <div class="ContactForm-item company">
+                            <label for="max_acceleration" class="ContactForm-headline">
+                                <span>Max Acceleration</span>
+                            </label>
+                            <input type="number" name="$Max Acceleration" placeholder="m/s2" id="max_acceleration"
+                                autocomplete="false" class="ContactForm-inputText">
+                        </div>
+                        <div class="ContactForm-item company">
+                            <label for="driving_mechanism" class="ContactForm-headline">
+                                <span>Driving Mechanism</span>
+                            </label>
+                            <select name="$driving_mechanism" id="driving_mechanism" class="ContactForm-inputText">
+                                <option value="4 wheel powered">4 wheel powered</option>
+                                <option value="2 wheel powered 2 caster wheels">2 wheel powered 2 caster wheels</option>
+                                <option value="Steering mechanism with 2 wheel powered">Steering mechanism with 2 wheel
+                                    powered</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <h4>Others</h4>
+                    <div class="cust-section payload">
+                        <div class="ContactForm-item company">
+                            <label for="outputs" class="ContactForm-headline">
+                                <span>Outputs Ports <span>(Ctrl+click to unselect)</span></span>
+                            </label>
+                            <select name="$Outputs" id="outputs" class="ContactForm-inputText" multiple>
+                                <option value="USB">USB</option>
+                                <option value="HDMI">HDMI</option>
+                                <option value="Ethernet">Ethernet</option>
+                                <option value="Power Supply out (12v/5A)">Power Supply out (12v/5A)</option>
+                                <option value="Power Supply out (5v/2A)">Power Supply out (5v/2A)</option>
+                            </select>
+                        </div>
+                        <div class="ContactForm-item company">
+                            <label for="accessories" class="ContactForm-headline">
+                                <span>Accessories</span>
+                            </label>
+                            <select name="$Accessories" id="accessories" class="ContactForm-inputText" multiple>
+                                <option value="E-Stop">E-Stop</option>
+                                <option value="Battery level indicators">Battery level indicators</option>
+                                <option value="Warning light indicators">Warning light indicators</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <h4>Contact Details</h4>
+                    <div class="cust-section contact">
+                        <div class="ContactForm-item company">
+                            <label for="name" class="ContactForm-headline">
+                                <span>Name</span>
+                                <sup>*</sup>
+                            </label>
+                            <input type="text" id="name" name="name" autocomplete="false" class="ContactForm-inputText"
+                                required>
+                        </div>
+                        <div class="ContactForm-item company">
+                            <label for="email" class="ContactForm-headline">
+                                <span>Email</span>
+                                <sup>*</sup>
+                            </label>
+                            <input type="email" id="email" name="email" class="ContactForm-inputText" required>
+                        </div>
+                        <div class="ContactForm-item company">
+                            <label for="phone" class="ContactForm-headline">
+                                <span>Contact Number</span>
+                                <sup>*</sup>
+                            </label>
+                            <input type="tel" id="phone" name="phone" class="ContactForm-inputText" required>
+                        </div>
+
+                    </div>
+                    <input type="hidden" name="replyTo" value="@">
+                    <div class="cust-section submit">
+                        <button class="bm-btn bm-btn_flat -sm -primary" type="submit">
+                            <span>Send</span>
+                        </button>
+                    </div>
+                    <div class="cust-section submit">
+                        <span id="result"></span>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
     <footer>
         <ul class="footer">
             <li class="footer-item"></li>
             <!-- <li class="footer-item footer-socials">
                     <a href="http://www.twitter.com">
-                        <img height="18" width="18" src="/assets/images/twitter.png" alt="Twitter" class="icons">
+                        <img height="18" width="18" src="./assets/images/twitter.png" alt="Twitter" class="icons">
                     </a>
                     <a href="http://www.facebook.com">
-                        <img height="18" width="18" src="/assets/images/facebook.png" alt="Facebook" class="icons">
+                        <img height="18" width="18" src="./assets/images/facebook.png" alt="Facebook" class="icons">
                     </a>
                 </li> -->
             <li class="footer-item">&copy; 2019 Interlock Group</li>
         </ul>
     </footer>
 
+    <script>
+        function toggleModal() {
 
+            let qsc = (s, o = document) => o.querySelector(s).classList;
+            qsc('.customize').contains('customize_active') ? qsc('.customize').remove('customize_active') : qsc(
+                '.customize').add('customize_active');
+            document.querySelector("#result").innerText = "";
+        }
 
-    <script src="/assets/js/main.js"></script>
+        function submitForm(e) {
+            e.preventDefault()
+            var form = document.querySelector('form');
+            var formData = new FormData(form);
+
+            var request = new XMLHttpRequest();
+            request.open("POST", "https://api.staticforms.xyz/submit");
+            request.setRequestHeader("Content-Type", "application/json");
+            request.onload = function () {
+                if (request.status == 200) {
+                    document.querySelector("#result").innerText = "Request Submitted!";
+                    document.querySelector('form').reset();
+
+                } else {
+                    document.querySelector("#result").innerText =
+                        "Unable to submit request currently! Send us a mail!";
+                }
+            };
+
+            request.onerror = function () { // only triggers if the request couldn't be made at all
+                document.querySelector("#result").innerText = "Network Error"
+            };
+
+            request.send(JSON.stringify(Object.fromEntries(formData)));
+
+        }
+    </script>
+
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

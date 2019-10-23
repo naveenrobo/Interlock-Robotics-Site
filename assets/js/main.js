@@ -1,6 +1,6 @@
 function init() {
     let isMobile  = document.querySelector("html").classList.contains("mobile");
-    if(!isMobile){
+    if(isMobile){
         THREE.WEBGL.isWebGLAvailable() ? (dwInitWebGL(), initSounds()) : dwShowError();
     }else {
         setTimeout(()=>{

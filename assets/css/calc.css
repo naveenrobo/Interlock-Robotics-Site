@@ -1,0 +1,188 @@
+.ContactForm-item {
+    margin-bottom: 20px
+}
+
+.ContactForm-item:last-child {
+    margin-bottom: 0
+}
+
+.ContactForm-headline {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    line-height: 1.3;
+    color: #fff
+}
+
+.ContactForm-headline sup {
+    margin-left: .5em
+}
+
+.ContactForm-inputText {
+    display: block;
+    width: 100%;
+    padding: .7rem .5rem;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+    font-size: .6rem;
+    color: #fff;
+    line-height: 1.3;
+    border-radius: 0;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #131313;
+    border: 1px solid #565656
+}
+
+.ContactForm-send,
+.NavFilter-btn {
+    box-sizing: content-box;
+    line-height: normal;
+    cursor: pointer
+}
+
+[data-whatinput=keyboard] .ContactForm-inputText:focus {
+    outline: #8e8e8e solid 2px
+}
+
+[data-whatinput=mouse] .ContactForm-inputText:focus,
+[data-whatinput=touch] .ContactForm-inputText:focus {
+    outline: 0
+}
+
+.ContactForm-inputText::-moz-selection {
+    background-color: #131313;
+    color: #000;
+    text-shadow: none
+}
+
+.ContactForm-inputText::selection {
+    background-color: #131313;
+    color: #000;
+    text-shadow: none
+}
+
+.is-iPhone .ContactForm-inputText {
+    font-size: .8rem
+}
+
+.ContactForm-send {
+    background: #fff;
+    border: 0;
+    padding: 0;
+    text-align: center;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    display: block;
+    position: relative;
+    width: 83.33333%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    color: #000;
+    overflow: hidden;
+    transition: background-color .35s cubic-bezier(.52, .08, .18, 1), color .5s cubic-bezier(.52, .08, .18, 1)
+}
+
+[data-whatinput=keyboard] .ContactForm-send:focus {
+    outline: #8e8e8e solid 4px
+}
+
+[data-whatinput=mouse] .ContactForm-send:focus,
+[data-whatinput=touch] .ContactForm-send:focus {
+    outline: 0
+}
+
+.ContactForm-send::after,
+.ContactForm-send::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    z-index: 0;
+    pointer-events: none
+}
+
+.ContactForm-send::before {
+    background-color: #aaa;
+    transition: -webkit-transform .8s cubic-bezier(.52, .08, .18, 1);
+    transition: transform .8s cubic-bezier(.52, .08, .18, 1);
+    transition: transform .8s cubic-bezier(.52, .08, .18, 1), -webkit-transform .8s cubic-bezier(.52, .08, .18, 1)
+}
+
+.ContactForm-send::after {
+    background-color: #8e8e8e;
+    transition: background .3s ease-in-out, -webkit-transform .7s cubic-bezier(.37, .16, .12, 1);
+    transition: transform .7s cubic-bezier(.37, .16, .12, 1), background .3s ease-in-out;
+    transition: transform .7s cubic-bezier(.37, .16, .12, 1), background .3s ease-in-out, -webkit-transform .7s cubic-bezier(.37, .16, .12, 1)
+}
+
+.no-touchevents .ContactForm-send:hover {
+    color: #fff
+}
+
+.no-touchevents .ContactForm-send:hover::before {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transition: -webkit-transform .6s cubic-bezier(.37, .16, .12, 1);
+    transition: transform .6s cubic-bezier(.37, .16, .12, 1);
+    transition: transform .6s cubic-bezier(.37, .16, .12, 1), -webkit-transform .6s cubic-bezier(.37, .16, .12, 1)
+}
+
+.no-touchevents .ContactForm-send:hover::after {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transition: background .3s ease-in-out, -webkit-transform .8s cubic-bezier(.52, .08, .18, 1);
+    transition: transform .8s cubic-bezier(.52, .08, .18, 1), background .3s ease-in-out;
+    transition: transform .8s cubic-bezier(.52, .08, .18, 1), background .3s ease-in-out, -webkit-transform .8s cubic-bezier(.52, .08, .18, 1)
+}
+
+.cust-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: flex-end;
+}
+
+.cust-section.submit {
+    justify-content: center;
+}
+
+.cust-section:first-of-type {
+    padding-top: 15px;
+}
+
+.ContactForm-item {
+    width: 100%;
+    margin: 0 10px;
+}
+
+@media (max-width: 750px) {
+    .cust-section {
+        flex-direction: column;
+    }
+
+    .ContactForm-inputText {
+        width: 90%;
+    }
+
+    .ContactForm-item {
+        margin-bottom: 20px;
+        padding-left: 20px;
+    }
+}
+
+form h4 {
+    font-size: 19px;
+    padding: 5px 10px;
+    color: #6c63ff;
+}

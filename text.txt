@@ -10,24 +10,30 @@ We don't make our design and force you to buy. We design from scratch and fabric
 Customization form.
 
 Payload - unit kg
+Ground Clearance
 Footprint - 
     - length
     - breath
     - height
 
+
 Operation Duration - hours/ km
+
 Type of wheels
 No of wheels
-Ground Clearance
-lead outs (check box) -- USB  ,HDMI  ,ethernet ,power supply ports (12v/5A), 5V/2A
+
 Max Travesing speed
 Max Acceleration
 Zero turning radius
-powered wheels 2/4 = Option
+
+powered wheels 2/4 => Option
+
 Driving machanism (radio box)
      - 4 wheel powered, 
      - 2 wheel powered 2 caster wheels
      - Steering mechanism with 2 wheel powered
+
+Lead outs (check box) -- USB  ,HDMI  ,ethernet ,power supply ports (12v/5A), 5V/2A
 Accessories 
   - E-Stop
   - Battery level indicators
