@@ -186,3 +186,42 @@ form h4 {
     padding: 5px 10px;
     color: #6c63ff;
 }
+
+.product-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product-container.single {
+    justify-content: center;
+}
+
+.product {
+    width: 50%;
+    margin: 10px 10px;
+}
+
+.product-title {
+    padding-bottom: 20px;
+    animation: fadeIn 0.9s both;
+    animation-delay: 0.9s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 25px;
+    cursor: default;
+    color: #FEBD1C;
+}
+
+@media only screen and (max-width : 768px) {
+    .product-container {
+        flex-direction: column;
+    }
+
+    .product {
+        width: 100%;
+        height: 100%;
+        margin: 10px 0;
+    }
+}
