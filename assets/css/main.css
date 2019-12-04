@@ -1126,3 +1126,19 @@ a.bm-btn_flat {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+
+.video-section {
+    width: 100%;
+    height: 100%;
+}
+
+.video-section .video-container {
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.video-section .video-container video {
+    margin: 50px 20px;
+    width: 40%;
+}
